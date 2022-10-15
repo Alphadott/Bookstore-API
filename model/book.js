@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema
 
+//Book model schema
 const BookModelSchema = new Schema({
     title: {
         type: String,

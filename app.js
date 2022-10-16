@@ -5,6 +5,7 @@ const bookRoute = require('./routes/books')
 
 require("dotenv").config()
 
+//initializing port from env variable
 const PORT = process.env.PORT
 
 const app = express()
@@ -16,9 +17,11 @@ connectToMongoDB()
 app.use(express.json())
 app.use('/books', bookRoute)
 
+//get home route
 app.get("/", (req, res) => {
     res.send("Welcome Home!")
 })
+
 
 app.listen(PORT, () => {
     console.log(`Server started on port: http://localhost:${PORT}`)

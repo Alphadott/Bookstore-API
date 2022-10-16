@@ -2,7 +2,7 @@ const express = require('express')
 const bookModel = require("../model/book")
 const bookRoute = express.Router()
 
-//CRUD routes ===> CREATE, READ, UPDATE, DELETE
+//CRUD Operations route ===> CREATE, READ, UPDATE, DELETE
 
 //Read all book route
 bookRoute.get("/", (req, res) => {

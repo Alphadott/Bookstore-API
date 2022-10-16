@@ -2,6 +2,7 @@ const express = require("express")
 
 const { connectToMongoDB } = require("./db")
 const bookRoute = require('./routes/books')
+const userRoute = require('./routes/User');
 
 require("dotenv").config()
 
@@ -16,6 +17,7 @@ connectToMongoDB()
 //express.json is a middle to help access anything contained in the req.body object
 app.use(express.json())
 app.use('/books', bookRoute)
+app.use('/user', userRoute)
 
 //get home route
 app.get("/", (req, res) => {

@@ -4,7 +4,7 @@ const bookRoute = express.Router()
 
 //CRUD routes ===> CREATE, READ, UPDATE, DELETE
 
-//Read all book
+//Read all book route
 bookRoute.get("/", (req, res) => {
     bookModel.find({})
         .then((books) => {
@@ -16,7 +16,7 @@ bookRoute.get("/", (req, res) => {
 })
 
 
-//Read by ID
+//Read by ID route
 bookRoute.get("/:id", (req, res) => {
     const id = req.params.id
     console.log(id)
